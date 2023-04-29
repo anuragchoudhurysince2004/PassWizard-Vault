@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Password generator</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <div class="logo">
+          <img src="https://cdn-icons-png.flaticon.com/512/906/906334.png" alt="logo img" height=70px>
+
+        </div>
+
+        <li>Home</li>
+        <li>contact</li>
+        <li>about</li>
+        <li>how it works</li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <p class="heading">select which type of password do you want to generate...</p>
+      <div class="options">
+        <label for ="1">
+        <input type =radio name="option" value="ssp" id="1"><a>super strong password</a></label>
+        <label for= "2">
+        <input type =radio name="option" value="p" id="2">strong password</label>
+        <label for ="3">
+        <input type =radio name="option" value="wp" id="3">weak password</label><br>
+        <button type="submit" id="optionsubmit" onclick="display()">submit</button>
+      </div>
+      <div class = "output"> 
+        <span id="alert"></span>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>
