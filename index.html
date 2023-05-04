@@ -1,50 +1,97 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password generator</title>
+    <link rel="stylesheet" href="general.css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="icon"
+      href="https://cdn-icons-png.flaticon.com/512/906/906334.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Password generator</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
-
-<body>
-  <header>
-    <nav>
-      <ul>
-        <div class="logo">
-          <img src="https://cdn-icons-png.flaticon.com/512/906/906334.png" alt="logo img" height=70px>
-
+  <body>
+    <header>
+      <nav class="main-nav">
+        <div class="logo-block">
+          <a href="#"
+            ><img
+              src="https://cdn-icons-png.flaticon.com/512/906/906334.png"
+              alt="logo img"
+              class="logo"
+            />
+          </a>
+          <p class="logo-heading">Password Generator</p>
         </div>
-
-        <li>Home</li>
-        <li>contact</li>
-        <li>about</li>
-        <li>how it works</li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <div class="container">
-      <p class="heading">select which type of password do you want to generate...</p>
-      <div class="options">
-        <label for ="1">
-        <input type =radio name="option" value="ssp" id="1"><a>super strong password</a></label>
-        <label for= "2">
-        <input type =radio name="option" value="p" id="2">strong password</label>
-        <label for ="3">
-        <input type =radio name="option" value="wp" id="3">weak password</label><br>
-        <button type="submit" id="optionsubmit" onclick="display()">submit</button>
-      </div>
-      <div class = "output"> 
-        <span id="alert"></span>
-      </div>
-    </div>
-  </main>
-  <footer></footer>
-  <script src="script.js"></script>
-
-
-</body>
-
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#">Home</a></li>
+          <li><a class="main-nav-link" href="#">contact</a></li>
+          <li><a class="main-nav-link" href="#">about</a></li>
+          <li><a class="main-nav-link" href="#">how it works</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="section-hero">
+        <div class="thumbnail">
+          <img
+            src="img/thumbnail-croped.webp"
+            alt="imaage showing random password generator"
+            class="thumbnail-img"
+          />
+          <a href="#generator" class="btn btn-hero">Start Generating</a>
+        </div>
+      </section>
+      <section class="section-generator" id="generator">
+        <div class="container">
+          <div class="qna">
+            <p class="heading-secondary">
+              Select the type of Password you want to Generate...
+            </p>
+            <div class="options heading-tertiary">
+              <label for="1">
+                <input type="radio" name="option" value="ssp" id="1" /><a
+                  >Super Strong Password</a
+                ></label
+              >
+              <label for="2">
+                <input type="radio" name="option" value="p" id="2" />Strong
+                Password</label
+              >
+              <label for="3">
+                <input type="radio" name="option" value="wp" id="3" />Weak
+                Password</label
+              ><br />
+            </div>
+            <button
+              type="submit"
+              id="optionsubmit"
+              class="btn"
+              onclick="display()"
+            >
+              submit
+            </button>
+          </div>
+          <div class="output">
+            <span id="alert"></span>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p class="copyright container">
+        Copyright &copy; 2023 All rights reserved
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
