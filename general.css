@@ -21,6 +21,12 @@ header {
   padding: 0 3.4rem;
   margin: 0 auto;
 }
+.container-landscape {
+  max-width: 150rem;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 8rem;
+}
 .heading-primary,
 .heading-secondary,
 .heading-tertiary {
@@ -45,4 +51,7 @@ header {
   text-decoration: none;
   border-radius: 15px;
   padding: 1.2rem 2.4rem;
+}
+.m-b-m {
+  margin-bottom: 25rem;
 }

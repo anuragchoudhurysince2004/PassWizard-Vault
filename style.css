@@ -69,7 +69,7 @@
 /* **************************** */
 .section-generator {
   padding: 4.8rem 2.4rem;
-  margin-bottom: 40rem;
+  margin-bottom: 25rem;
 }
 .qna {
   text-align: center;
@@ -132,4 +132,40 @@ input[type="radio"] {
   font-size: 1.6rem;
   color: #444;
   text-align: center;
+}
+
+/* **************************** */
+/* Connect with Us */
+/* **************************** */
+.connect-section {
+  margin-bottom: 10rem;
+}
+.socials {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  font-size: 1.9rem;
+}
+.sicon {
+  max-width: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  /* display: inline-block; */
+}
+li {
+  list-style: none;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  /* width: 18px; */
+}
+.sicon {
+  text-decoration: none;
+  font-size: 2.2rem;
+  color: black;
+}
+.sicon img {
+  height: 8rem;
 }
