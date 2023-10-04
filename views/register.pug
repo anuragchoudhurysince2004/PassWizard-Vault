@@ -1,0 +1,24 @@
+extends base
+
+block content
+  .body-container
+    .registration-container
+      h2.registration-heading Register a New User
+      form.registration-form(action="/register", method="post")
+        .form-group
+          label(for="username") Username
+          input.registration-input(type="text", id="username", name="username", placeholder="Enter your username", required)
+        
+        .form-group
+          label(for="email") Email
+          input.registration-input(type="email", id="email", name="email", placeholder="Enter your email", required)
+        
+        .form-group
+          label(for="password") Password
+          input.registration-input(type="password", id="password", name="password", placeholder="Enter your password", required)
+        
+        .form-group
+          label(for="confirmPassword") Confirm Password
+          input.registration-input(type="password", id="confirmPassword", name="confirmPassword", placeholder="Confirm your password", required)
+        
+        button.registration-button(type="submit") Register

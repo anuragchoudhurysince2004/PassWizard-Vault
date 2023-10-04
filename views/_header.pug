@@ -1,0 +1,22 @@
+header
+  nav.main-nav
+    .logo-block
+      a(href="#")
+        img.logo(src="https://cdn-icons-png.flaticon.com/512/906/906334.png" alt="logo img")
+      p.logo-heading Password Generator
+    ul.main-nav-list
+      li
+        a.main-nav-link(href="/") Home
+      li
+        a.main-nav-link(href="#connect") Contact
+      li
+        a.main-nav-link(href="#") About
+      li
+        a.main-nav-link(href="#") How it works
+  .login-register-box 
+    if user
+        button.button.logout-button LOGOUT
+    else
+      .user-action
+        a.button.login-button(href="/login") LOGIN
+        a.button.register-button(href="/register") REGISTER

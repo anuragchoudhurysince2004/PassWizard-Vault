@@ -1,0 +1,47 @@
+extends base
+
+block content
+  main
+    section.section-hero
+      .thumbnail
+        img.thumbnail-img(src="img/thumbnail-croped.webp" alt="image showing random password generator")
+        a.btn.btn-hero(href="#generator") Start Generating
+
+    section.section-generator#generator
+      .container
+        .qna
+          p.heading-secondary Select the type of Password you want to Generate...
+          .options.heading-tertiary
+            label(for="1")
+              input(type="radio" name="option" value="ssp" id="1")
+              | Super Strong Password
+            label(for="2")
+              input(type="radio" name="option" value="p" id="2")
+              | Strong Password
+            label(for="3")
+              input(type="radio" name="option" value="wp" id="3")
+              | Weak Password
+              br
+          button.btn(type="submit" id="optionsubmit" onclick="display()") submit
+        .output
+          span#alert
+
+    .connect-section#connect
+      p.heading-secondary.container-landscape Connect with Us !!
+      ul.socials.container.container-socials
+        li
+          a.sicon.instagram(href="https://www.instagram.com/anuragchoudhurysince2004" target="_blank")
+            img(src="img/instagram.png" height="20rem") 
+            | Instagram
+        li
+          a.sicon.linkedin(href="https://www.linkedin.com/in/anurag-choudhury-124b29259/" target="_blank")
+            img(src="img/linkedin.png" height="20rem") 
+            | Linkedin
+        li
+          a.sicon.github(href="https://github.com/anuragchoudhurysince2004" target="_blank")
+            img(src="img/github.png" height="20rem") 
+            | Git hub
+        li
+          a.sicon.gmail(href="https://mail.google.com/mail/?view=cm&fs=1&to=idanurag567@gmail.com" target="_blank")
+            img(src="img/gmail.png" height="20rem") 
+            | Mail Us
