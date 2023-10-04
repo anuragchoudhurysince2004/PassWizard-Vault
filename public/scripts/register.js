@@ -1,11 +1,12 @@
 import { showAlert } from "./alerts.js";
 const registerButton = document.querySelector(".registration-form");
+import { base_url } from "./helper.js";
 
 const register = async (username, email, password) => {
   try {
     const res = await axios({
       method: "POST",
-      url: "http://127.0.0.1:3000/api/v1/auth/register",
+      url: `${base_url}/api/v1/auth/register`,
       data: {
         username,
         email,

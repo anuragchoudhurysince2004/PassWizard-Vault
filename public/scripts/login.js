@@ -1,11 +1,12 @@
 import { showAlert } from "./alerts.js";
 const logoutButton = document.querySelector(".logout-button");
 const loginButton = document.querySelector(".form");
+import { base_url } from "./helper.js";
 const login = async (email, password) => {
   try {
     const res = await axios({
       method: "POST",
-      url: "http://127.0.0.1:3000/api/v1/auth/login",
+      url: `${base_url}/api/v1/auth/login`,
       data: {
         email,
         password,
@@ -26,7 +27,7 @@ const logout = async () => {
   try {
     const res = await axios({
       method: "GET",
-      url: "http://127.0.0.1:3000/api/v1/auth/logout",
+      url: `${base_url}/api/v1/auth/logout`,
     });
     if ((res.data.status = "success"))
       showAlert("success", "Log out successful");
