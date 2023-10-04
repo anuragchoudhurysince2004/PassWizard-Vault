@@ -1,1 +1,1 @@
-export const base_url = "https://passwizard-vault.up.railway.app/";
+export const base_url = "https://passwizard-vault.up.railway.app";
