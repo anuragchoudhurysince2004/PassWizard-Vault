@@ -22,6 +22,7 @@ const login = async (email, password) => {
       console.log(res.data);
     }
   } catch (err) {
+    console.log("axios promise rejected ", err);
     showAlert("error", err.response.data.error);
   }
 };
