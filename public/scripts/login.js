@@ -17,6 +17,8 @@ const login = async (email, password) => {
       window.setTimeout(() => {
         location.assign("/profile");
       }, 1500);
+    } else {
+      console.log(res.data);
     }
   } catch (err) {
     showAlert("error", err.response.data.error);
