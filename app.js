@@ -15,11 +15,13 @@ app.set("view engine", "pug");
 
 //routes
 const authRoutes = require("./routes/authRoutes");
-const protectedRoutes = require("./routes/protectedRoutes");
+const featureRoutes = require("./routes/featureRoutes");
 const viewRoutes = require("./routes/viewRoutes");
 app.use("/", viewRoutes);
 app.use("/api/v1/auth", authRoutes);
 app.use("/apt/v1", authRoutes);
+app.use("/feature", featureRoutes);
+
 // app.use("/protected", protectedRoutes);
 
 module.exports = app;

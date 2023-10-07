@@ -116,7 +116,7 @@ exports.isLoggedIn = async (req, res, next) => {
   if (req.cookies.jwt) {
     try {
       // 1) verify token
-      const decoded = await promisify(jwt.verify)(
+      const decoded = await promisify(JWT.verify)(
         req.cookies.jwt,
         process.env.JWT_SECRET
       );
@@ -133,9 +133,21 @@ exports.isLoggedIn = async (req, res, next) => {
       // }
 
       // THERE IS A LOGGED IN USER
+
       res.locals.user = currentUser;
+      res
+        .status(200)
+        .json({
+          status: "success",
+          message: "the user is logged in ",
+          currentUser,
+        });
       return next();
     } catch (err) {
+      console.log(
+        "is logges in fn is called and i think the user is logged in "
+      );
+      console.log(err);
       return next();
     }
   }

@@ -3,73 +3,127 @@
 /* **************************** */
 .main-nav {
   display: flex;
-  /* flex-direction: column; */
   justify-content: space-between;
   align-items: center;
   margin: 0 4.8rem;
-  border-bottom: 2px solid #999;
-  height: 7.8rem;
-  margin-bottom: 5rem;
+  padding: 0rem 0rem;
 }
 .logo-block {
+  font-family: "Barlow Condensed", sans-serif;
   display: flex;
+  font-size: 4.6rem;
   align-items: center;
   gap: 1.6rem;
   font-weight: 600;
 }
 .logo {
-  height: 4.8rem;
+  height: 8rem;
 }
 
 .main-nav-list {
+  font-family: "Nunito", sans-serif;
+  font-size: 2rem;
   display: flex;
   align-items: center;
   list-style: none;
   justify-content: center;
-  gap: 3.2rem;
+  gap: 2.4rem;
+}
+.main-nav-link {
+  font-weight: 600;
 }
 .main-nav-link:link,
 .main-nav-link:visited {
   text-decoration: none;
-  color: #333;
   display: inline-block;
-  font-weight: 500;
+  color: white;
+}
+
+.user-action {
+  display: flex;
+  float: right;
+  margin-right: 4rem;
+  /* display: inline;
+  position: relative;
+  right: -160rem; */
+  justify-content: flex-end;
+}
+.button {
+  padding: 1rem 2rem;
+  background-color: #86c232;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px;
+  margin-right: 0.8rem;
+  font-weight: 800;
+}
+.button:hover {
+  background-color: #61892f;
 }
 
 /* **************************** */
 /* hero-section */
 /* **************************** */
 .section-hero {
-}
-.thumbnail {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  /* flex-grow: 0;
-  flex-shrink: 1; */
-  align-items: center;
-  justify-content: center;
-  gap: 2.4rem;
-  /* margin-bottom: 5.6rem; */
-}
-.thumbnail-img {
-  height: 60rem;
+  height: 80vh;
 }
 
-.btn-hero {
-  background-color: black;
-  color: white;
-  border-radius: 20px;
-  font-size: 3.2rem;
-  padding: 1.6rem 3.2rem;
-  margin-bottom: 20rem;
+.hero {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-around;
+  justify-items: center;
+  padding: 2rem 5rem 5rem 5rem;
+  background-color: #fff4e6;
 }
+.hero-text-box {
+  padding-top: 15rem;
+}
+.img-hero {
+  /* height: 60rem; */
+  width: 80rem;
+}
+.hero-heading {
+  color: #ffe066;
+  padding: 21rem 0rem 2rem 5rem;
+  font-family: "source code pro", sans-serif;
+  font-size: 6rem;
+  font-weight: 800;
+}
+.hero-secondary-heading {
+  padding: 0rem 0rem 9rem 10rem;
+  font-family: "source code pro", sans-serif;
+  font-size: 4rem;
+  font-weight: 600;
+}
+.cta {
+  text-align: center;
+}
+.hero-cta {
+  font-family: "VT323", sans-serif;
+  padding: 1.2rem 2.4rem;
+  border-radius: 28px;
+  font-size: 5.6rem;
+  color: #86c232;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.hero-cta:hover {
+  box-shadow: 0 30px 40px rgba(0, 0, 0, 0.5);
+}
+
 /* **************************** */
 /* main password generator section */
 /* **************************** */
 .section-generator {
   padding: 4.8rem 2.4rem;
-  margin-bottom: 25rem;
+  margin-bottom: 8rem;
+}
+.generator-heading {
+  font-family: Source Code Pro, sans-serif;
+  letter-spacing: -6px;
+  font-weight: 500;
+  padding-bottom: 5rem;
 }
 .qna {
   text-align: center;
@@ -79,6 +133,8 @@
   margin-bottom: 3.6rem;
 }
 .options label {
+  font-family: "Barlow Condensed", sans-serif;
+  letter-spacing: 1px;
   cursor: pointer;
   margin-right: 1.6rem;
 }
@@ -116,14 +172,23 @@ input[type="radio"] {
 }
 .gen {
   font-weight: 400;
-  background-color: #fcf5c7;
+  background-color: #40c057;
   padding: 1.2rem 2.4rem;
-  border-radius: 5px;
-  margin-bottom: 1.2rem;
+  border-radius: 15px;
+}
+.output-ele {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .copy-button {
-  font-size: 2.4rem;
-  text-align: center;
+  border-radius: 15px;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+.copy-button svg {
+  height: 5rem;
 }
 /* **************************** */
 /* footer */
@@ -170,20 +235,6 @@ li {
   height: 8rem;
 }
 
-/* //////////////////////////// */
-.user-action {
-  display: inline;
-  position: relative;
-  right: -160rem;
-}
-.button {
-  padding: 1rem 2rem;
-  background-color: black;
-  color: white;
-  text-decoration: none;
-  border-radius: 20px;
-  margin-right: 0.8rem;
-}
 /* ///////////////////////////////////////////// */
 /* register user css */
 /* ///////////////////////////////////////////// */
@@ -244,4 +295,24 @@ li {
 
 .registration-button:hover {
   background-color: #45a049;
+}
+
+/* /////////////////////////////////////////// */
+/* CSS FOR PROFILE PAGE */
+/* /////////////////////////////////////////// */
+.saved-pass-heading {
+  color: #86c232;
+  text-align: center;
+  font-size: 5rem;
+  padding-bottom: 6rem;
+}
+.saved-pass-box {
+  padding: 2rem 15rem;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 0.3fr;
+}
+.website-column-heading {
+  font-size: 5.2rem;
+  /* padding: 0rem 15rem; */
+  color: #ffe066;
 }

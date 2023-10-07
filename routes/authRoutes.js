@@ -11,7 +11,8 @@ router.post("/login", authController.login);
 
 //logging user out
 router.get("/logout", authController.logout);
-//testin route for the protected routes
+//checking if user is logged in or not
+router.get("/isloggedin", authController.isLoggedIn);
 
 // router.route("/login").post(authController.login);
 // router.get("/", "./../public/html/index.html");

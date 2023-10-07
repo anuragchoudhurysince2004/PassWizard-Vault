@@ -1,23 +1,26 @@
-html {
-  font-size: 62.5%;
-}
-body {
-  font-family: "inter", sans-serif;
-  font-weight: 400;
-  line-height: 1; /* you should check the difference after removing this*/
-  color: #555;
-  background-color: #f8f9fa;
-}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "lato", sans-serif;
+  font-size: 3.6rem;
+  font-weight: 400;
+  line-height: 1; /* you should check the difference after removing this*/
+  color: white;
+  background-color: #222629;
+}
+
 header {
   font-size: 2.4rem;
 }
 .container {
-  max-width: 120rem;
+  max-width: 140rem;
   padding: 0 3.4rem;
   margin: 0 auto;
 }
@@ -27,25 +30,19 @@ header {
   text-align: center;
   padding-top: 8rem;
 }
-.heading-primary,
-.heading-secondary,
-.heading-tertiary {
-  font-weight: 700;
-  letter-spacing: normal;
-  color: #333;
+.primary-heading {
+  font-size: 4.8rem;
+  font-weight: 800;
 }
-.heading-primary {
-  font-size: 5.6rem;
-  margin-bottom: 3.2rem;
+.secondary-heading {
+  font-size: 3.8rem;
+  font-weight: 600;
 }
-.heading-secondary {
-  font-size: 4.4rem;
-  margin-bottom: 9.6rem;
-}
-.heading-tertiary {
+.tertiary-heading {
   font-size: 3rem;
-  margin-bottom: 3.2rem;
+  font-weight: 400;
 }
+
 .btn {
   cursor: pointer;
   text-decoration: none;
@@ -54,4 +51,7 @@ header {
 }
 .m-b-m {
   margin-bottom: 25rem;
+}
+.text-c {
+  text-align: center;
 }

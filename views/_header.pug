@@ -1,20 +1,21 @@
 header
   nav.main-nav
     .logo-block
-      a(href="#")
-        img.logo(src="https://cdn-icons-png.flaticon.com/512/906/906334.png" alt="logo img")
-      p.logo-heading Password Generator
+      a(href="/")
+        img.logo(src="img/logo.png" alt="logo img")
+      p.logo-heading PassWizard Vault
     ul.main-nav-list
       li
         a.main-nav-link(href="/") Home
       li
-        a.main-nav-link(href="#connect") Contact
-      li
         a.main-nav-link(href="#") About
       li
         a.main-nav-link(href="#") How it works
+      li
+        a.main-nav-link(href="#connect") Contact
   .login-register-box 
     if user
+      .user-action
         button.button.logout-button LOGOUT
     else
       .user-action

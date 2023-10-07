@@ -2,7 +2,7 @@ const db = require("./../utils/dbclient");
 exports.getOverview = async (req, res) => {
   try {
     await db.client.connect();
-    const database = db.client.db("PIB");
+    const database = db.client.db("passwizard-vault");
     const collection = database.collection("news");
     const articles = await collection.find({}).toArray();
     res.status(200).render("index.pug", {
@@ -38,33 +38,14 @@ exports.showRegisterForm = async (req, res) => {
 exports.showProfile = async (req, res) => {
   try {
     await db.client.connect();
-    const database = db.client.db("PIB");
-    const collection = database.collection("news");
-    let positiveNews;
+    const database = db.client.db("passwizard-vault");
+    const collection = database.collection("users");
+    let target;
     let negativeNews;
-
-    //adding the if-else only for if the user is admin then he could be able to see all the news in the databse marked as positive and negative
-    if (req.user.department === "admin") {
-      positiveNews = await collection.find({ sentiment: "1" }).toArray();
-      neutralNews = await collection.find({ sentiment: "0" }).toArray();
-
-      negativeNews = await collection.find({ sentiment: "-1" }).toArray();
-    } else {
-      positiveNews = await collection
-        .find({ sentiment: "1", department: req.user.department })
-        .toArray();
-      neutralNews = await collection
-        .find({ sentiment: "0", department: req.user.department })
-        .toArray();
-
-      negativeNews = await collection
-        .find({ sentiment: "-1", department: req.user.department })
-        .toArray();
-    }
+    target = await collection.findOne({ email: req.user.email });
+    const storepass = target.storepass;
     await res.status(200).render("profile.pug", {
-      positiveNews,
-      neutralNews,
-      negativeNews,
+      storepass,
     });
   } catch (err) {
     //the catch block is not working currently
