@@ -1,13 +1,7 @@
 const db = require("./../utils/dbclient");
 exports.getOverview = async (req, res) => {
   try {
-    await db.client.connect();
-    const database = db.client.db("passwizard-vault");
-    const collection = database.collection("news");
-    const articles = await collection.find({}).toArray();
-    res.status(200).render("index.pug", {
-      articles,
-    });
+    res.status(200).render("index.pug", {});
 
     //we would need to await the query for getting news from the database
   } catch (err) {
