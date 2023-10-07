@@ -12,17 +12,13 @@ const login = async (email, password) => {
         password,
       },
     });
-    console.log(res);
     if (res.data.status === "success") {
       showAlert("success", "Logged in successfully!");
       window.setTimeout(() => {
         location.assign("/profile");
       }, 1500);
-    } else {
-      console.log(res.data);
     }
   } catch (err) {
-    console.log("axios promise rejected ", err);
     showAlert("error", err.response.data.error);
   }
 };
