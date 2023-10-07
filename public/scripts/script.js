@@ -100,37 +100,38 @@ const checkLogin = async () => {
 
 const generatorContainer = document.querySelector(".generator-container");
 let loginCheckResult;
-
-generatorContainer.addEventListener("click", (event) => {
-  if (event.target.matches(".copy-button")) {
-    function copytoclipboard() {
-      const copy_text = document.getElementById("space").textContent;
-      navigator.clipboard.writeText(copy_text);
-    }
-    copytoclipboard();
-  }
-  if (event.target.matches(".savePass")) {
-    const savePass = document.querySelector(".savePass");
-    (async () => {
-      loginCheckResult = await checkLogin();
-      if (loginCheckResult.status === "success") {
-        //add adjacent html for the form of username and website
-        document
-          .querySelector(".output")
-          .insertAdjacentHTML("beforeend", formHTML);
-      } else {
-        console.log(loginCheckResult.email);
+if (generatorContainer) {
+  generatorContainer.addEventListener("click", (event) => {
+    if (event.target.matches(".copy-button")) {
+      function copytoclipboard() {
+        const copy_text = document.getElementById("space").textContent;
+        navigator.clipboard.writeText(copy_text);
       }
-    })();
-  }
-  if (event.target.matches(".confirmSavePass")) {
-    const email = loginCheckResult.email;
-    const password = document.getElementById("space").textContent;
-    const username = document.getElementById("username").value;
-    const website = document.getElementById("website").value;
-    pushPassToDb(email, password, username, website);
-  }
-});
+      copytoclipboard();
+    }
+    if (event.target.matches(".savePass")) {
+      const savePass = document.querySelector(".savePass");
+      (async () => {
+        loginCheckResult = await checkLogin();
+        if (loginCheckResult.status === "success") {
+          //add adjacent html for the form of username and website
+          document
+            .querySelector(".output")
+            .insertAdjacentHTML("beforeend", formHTML);
+        } else {
+          console.log(loginCheckResult.email);
+        }
+      })();
+    }
+    if (event.target.matches(".confirmSavePass")) {
+      const email = loginCheckResult.email;
+      const password = document.getElementById("space").textContent;
+      const username = document.getElementById("username").value;
+      const website = document.getElementById("website").value;
+      pushPassToDb(email, password, username, website);
+    }
+  });
+}
 
 // const genPass = document.getElementById("space").textContent.trim();
 // pushPasstoDb(genPass);
