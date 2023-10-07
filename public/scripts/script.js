@@ -41,7 +41,7 @@ class passgenerator {
 let c = new passgenerator();
 
 const outputHTML = `<p class="gen-pass">Generated Password is :</p><div class="output-ele"><span class="gen" id="space"> variable
-</span> <button class="copy-button"  ><svg class='copy-button' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="add"><path d="M12 13h-1v-1c0-.6-.4-1-1-1s-1 .4-1 1v1H8c-.6 0-1 .4-1 1s.4 1 1 1h1v1c0 .6.4 1 1 1s1-.4 1-1v-1h1c.6 0 1-.4 1-1s-.4-1-1-1z"></path><path d="M17 3h-6C8.8 3 7 4.8 7 7c-2.2 0-4 1.8-4 4v6c0 2.2 1.8 4 4 4h6c2.2 0 4-1.8 4-4 2.2 0 4-1.8 4-4V7c0-2.2-1.8-4-4-4zm-2 13v1c0 1.1-.9 2-2 2H7c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2h6c1.1 0 2 .9 2 2v5zm4-3c0 1.1-.9 2-2 2v-4c0-2.2-1.8-4-4-4H9c0-1.1.9-2 2-2h6c1.1 0 2 .9 2 2v6z"></path></svg></button><buttton class="savePass" >Save Password</button></div>`;
+</span> <button class="copy-button"  ><svg class='copy-button' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="add"><path d="M12 13h-1v-1c0-.6-.4-1-1-1s-1 .4-1 1v1H8c-.6 0-1 .4-1 1s.4 1 1 1h1v1c0 .6.4 1 1 1s1-.4 1-1v-1h1c.6 0 1-.4 1-1s-.4-1-1-1z"></path><path d="M17 3h-6C8.8 3 7 4.8 7 7c-2.2 0-4 1.8-4 4v6c0 2.2 1.8 4 4 4h6c2.2 0 4-1.8 4-4 2.2 0 4-1.8 4-4V7c0-2.2-1.8-4-4-4zm-2 13v1c0 1.1-.9 2-2 2H7c-1.1 0-2-.9-2-2v-6c0-1.1.9-2 2-2h6c1.1 0 2 .9 2 2v5zm4-3c0 1.1-.9 2-2 2v-4c0-2.2-1.8-4-4-4H9c0-1.1.9-2 2-2h6c1.1 0 2 .9 2 2v6z"></path></svg></button></div><buttton class="savePass" >Save Password</button>`;
 
 function display() {
   if (document.getElementById("1").checked) {
@@ -70,12 +70,12 @@ if (submitButtonForGenPass) {
 
 //HTML for form for gettin username and website
 
-const formHTML = `<form >
+const formHTML = `<form class="password-associate" >
 <label for="username">Username:</label>
-<input type="text" id="username" name="username" placeholder="Enter your username for the generated pass (optional)" ><br><br>
+<input type="text" id="username" name="username" placeholder="Enter your username for the generated pass (optional)" ><div class="optional-text"> (Optional) </div><br><br>
 
 <label for="website">Website:</label>
-<input type="text" id="website" name="website" placeholder="Enter the website name or alias for the password(optional) " ><br><br>
+<input type="text" id="website" name="website" placeholder="Enter the website name or alias for the password(optional) " ><div class="optional-text"> (Optional) </div><br><br>
 
 <button class="confirmSavePass">Push password </button>
 </form>`;

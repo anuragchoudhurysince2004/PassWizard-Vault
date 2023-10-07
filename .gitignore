@@ -2,6 +2,6 @@ node_modules
 
 config.env
 
-# helper.js
+helper.js
 public/scripts/helper.js
 /public/scripts/helper.js
