@@ -1,5 +1,4 @@
 # [PassWizard-vault]
-Certainly! Here's an example of an "About" section for a password generator application named "Pass Wizard Vault":
 
 ---
 
